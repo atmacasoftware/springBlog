@@ -36,6 +36,16 @@ public class BlogApplication {
 
 
 
+
+
+
+
+
+
+
+
+
+
     @Bean
     CommandLineRunner userCreator(UserRepository userRepository){
         return (args) -> {
