@@ -4,11 +4,9 @@ import net.atmacacode.blog.dao.UserRepository;
 import net.atmacacode.blog.dto.UserUpdate;
 import net.atmacacode.blog.entities.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.UUID;
 
 @Service
 public class UserService {

@@ -1,7 +1,6 @@
 package net.atmacacode.blog.services;
 
 import net.atmacacode.blog.dao.BlogRepository;
-import net.atmacacode.blog.dto.BlogDTO;
 import net.atmacacode.blog.dto.BlogUpdate;
 import net.atmacacode.blog.entities.Blog;
 import org.springframework.beans.factory.annotation.Autowired;
