@@ -9,7 +9,6 @@ public class BlogUpdate {
     private String content;
     private String author;
     private boolean isPublished;
-    private LocalDateTime updatedDate;
 
     public String getTitle() {
         return title;
@@ -41,13 +40,5 @@ public class BlogUpdate {
 
     public void setPublished(boolean published) {
         isPublished = published;
-    }
-
-    public LocalDateTime getUpdatedDate() {
-        return updatedDate;
-    }
-
-    public void setUpdatedDate(LocalDateTime updatedDate) {
-        this.updatedDate = updatedDate;
     }
 }

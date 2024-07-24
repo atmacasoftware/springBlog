@@ -5,20 +5,10 @@ import net.atmacacode.blog.entities.Blog;
 import java.time.LocalDateTime;
 
 public class BlogDTO {
-    private long id;
     private String title;
     private String content;
     private String author;
     private boolean isPublished;
-    private LocalDateTime publishedDate;
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
 
     public String getTitle() {
         return title;
@@ -52,18 +42,8 @@ public class BlogDTO {
         isPublished = published;
     }
 
-    public BlogDTO(Blog blog){
-        blog.setId(id);
-        blog.setTitle(title);
-        blog.setContent(content);
-        blog.setAuthor(author);
-        blog.setPublished(isPublished);
-        blog.setPublishedDate(LocalDateTime.now());
-    }
-
     public Blog toBlog(){
         Blog blog = new Blog();
-        blog.setId(id);
         blog.setTitle(title);
         blog.setContent(content);
         blog.setAuthor(author);

@@ -24,8 +24,8 @@ public class BlogController {
     }
 
     @GetMapping("/{id}")
-    BlogDTO getBlogById(@PathVariable long id) {
-        return new BlogDTO(blogService.getBlogById(id));
+    Blog getBlogById(@PathVariable long id) {
+        return blogService.getBlogById(id);
     }
 
     @GetMapping()
@@ -33,13 +33,13 @@ public class BlogController {
         return blogService.getAllBlogs();
     }
 
-    @PutMapping()
+    @PutMapping("/{id}")
     RequestMessage updateBlog(@PathVariable long id, @RequestBody BlogUpdate blogUpdate) {
         blogService.update(id, blogUpdate);
         return new RequestMessage("Blog Güncellendi");
     }
 
-    @DeleteMapping()
+    @DeleteMapping("/{id}")
     RequestMessage deleteBlog(@PathVariable long id) {
         blogService.delete(id);
         return new RequestMessage("Blog Silindi");

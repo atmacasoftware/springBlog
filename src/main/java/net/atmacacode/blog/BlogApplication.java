@@ -1,5 +1,7 @@
 package net.atmacacode.blog;
 
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.info.Info;
 import net.atmacacode.blog.dao.BlogRepository;
 import net.atmacacode.blog.dao.UserRepository;
 import net.atmacacode.blog.entities.Blog;
@@ -12,6 +14,7 @@ import org.springframework.context.annotation.Bean;
 import java.time.LocalDateTime;
 
 @SpringBootApplication
+@OpenAPIDefinition(info = @Info(title = "Atmaca Code", version = "1.0.0", description = "Atmaca Code Blog Website"))
 public class BlogApplication {
 
     public static void main(String[] args) {

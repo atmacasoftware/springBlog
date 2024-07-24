@@ -34,11 +34,13 @@ public class BlogService {
         inDb.setContent(blogUpdate.getContent());
         inDb.setUpdatedDate(LocalDateTime.now());
         inDb.setAuthor(blogUpdate.getAuthor());
+        inDb.setUpdatedDate(LocalDateTime.now());
         blogRepository.save(inDb);
     }
 
     public void delete(long id) {
-        blogRepository.deleteById(id);
+        Blog inDb = this.getBlogById(id);
+        blogRepository.delete(inDb);
     }
 
 }
